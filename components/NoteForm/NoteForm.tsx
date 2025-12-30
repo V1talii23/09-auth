@@ -9,7 +9,7 @@ import { useNoteDraft } from '../../lib/store/noteStore';
 import { Metadata } from 'next';
 
 import { KEY } from '@/types/constants';
-import { createNote } from '@/lib/api';
+import { createNote } from '@/lib/api/clientApi';
 import type { CreateNoteData } from '@/types/note';
 
 export const metadata: Metadata = {

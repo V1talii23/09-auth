@@ -8,7 +8,7 @@ import type { Note } from '@/types/note';
 import { useMutation } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
 import { KEY } from '@/types/constants';
-import { deleteNote } from '@/lib/api';
+import { deleteNote } from '@/lib/api/clientApi';
 
 interface NoteListProps {
   notes: Note[];

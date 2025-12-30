@@ -3,7 +3,7 @@
 import css from '@/app/page.module.css';
 import { KEY } from '@/types/constants';
 import Link from 'next/link';
-import { getNotes } from '@/lib/api';
+import { getNotes } from '@/lib/api/clientApi';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
