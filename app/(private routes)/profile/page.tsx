@@ -2,20 +2,25 @@ import css from './ProfilePage.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { useAuthStore } from '@/lib/store/auth';
 
-// Profile metadata is Private route, so my question is: Do i need to make OpenGraph for it?
 export const metadata: Metadata = {
   title: 'Profile',
   description: 'Explore your profile information here',
+  openGraph: {
+    title: 'Profile',
+    description:
+      'Manage your profile, update personal details, and customize account settings easily.',
+    url: 'http://localhost:3000/profile',
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Profile',
+      },
+    ],
+  },
 };
-
-// export const generateMetadata = async (): Promise<Metadata> => {
-//   return {
-//     title: 'Profile',
-//     description: 'Explore your profile information here',
-//   };
-// };
 
 function Profile() {
   // const user = useAuthStore((state) => state.user);

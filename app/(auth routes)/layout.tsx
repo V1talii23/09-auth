@@ -1,38 +1,20 @@
-import css from '@/app/(private routes)/notes/filter/layout.module.css';
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
 }
 
 function AuthLayout({ children }: AuthLayoutProps) {
-  return (
-    <section className={css.container}>
-      <div className={css.notesWrapper}>{children}</div>
-    </section>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.refresh();
+  }, [router]);
+
+  return <>{children}</>;
 }
 
 export default AuthLayout;
-
-// 'use client';
-
-// import { useEffect, useState } from 'react';
-// import { useRouter } from 'next/navigation';
-
-// interface AuthLayoutProps {
-//   children: React.ReactNode;
-// }
-
-// function AuthLayout({ children }: AuthLayoutProps) {
-//   const [loading, setLoading] = useState(true);
-//   const router = useRouter();
-
-//   useEffect(() => {
-//     router.refresh();
-//     setLoading(false);
-//   }, [router]);
-
-//   return <>{loading ? <p>Loading...</p> : children}</>;
-// }
-
-// export default AuthLayout;
