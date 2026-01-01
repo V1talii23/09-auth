@@ -47,7 +47,7 @@ async function Profile() {
           </div>
           <div className={css.profileInfo}>
             <p>Username: {user.username}</p>
-            <p>Email: ${user?.email}</p>
+            <p>Email: {user?.email}</p>
           </div>
         </div>
       </main>
