@@ -4,7 +4,7 @@ import { checkSessionServer } from './lib/api/serverApi';
 import { NextRequest, NextResponse } from 'next/server';
 
 const privateRoutes = ['/profile', '/notes/filter'];
-const publicRoutes = ['sigh-in', 'sigh-up'];
+const publicRoutes = ['/sigh-in', '/sigh-up'];
 
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -76,5 +76,5 @@ export async function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matceher: ['/profile/:path*', '/notes/filter/:path*', '/sigh-in', '/sigh-up'],
+  matcher: ['/profile/:path*', '/notes/filter/:path*', '/sigh-in', '/sigh-up'],
 };
