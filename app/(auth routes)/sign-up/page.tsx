@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
 import { useAuthStore } from '@/lib/store/auth';
 
-function SighUp() {
+function SignUp() {
   const router = useRouter();
   const setUser = useAuthStore((state) => state.setUser);
 
@@ -72,4 +72,4 @@ function SighUp() {
   );
 }
 
-export default SighUp;
+export default SignUp;
