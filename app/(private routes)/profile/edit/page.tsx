@@ -4,7 +4,7 @@ import css from './EditProfilePage.module.css';
 import Image from 'next/image';
 import { getMe, updateMe } from '@/lib/api/clientApi';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { useAuthStore } from '@/lib/store/auth';
+import { useAuthStore } from '@/lib/store/authStore';
 import { useRouter } from 'next/navigation';
 import { User } from '@/types/user';
 

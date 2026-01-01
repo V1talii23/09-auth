@@ -4,7 +4,7 @@ import { login } from '@/lib/api/clientApi';
 import css from './SignIn.module.css';
 import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
-import { useAuthStore } from '@/lib/store/auth';
+import { useAuthStore } from '@/lib/store/authStore';
 
 function SignIn() {
   const router = useRouter();
