@@ -62,7 +62,7 @@ export async function proxy(req: NextRequest) {
     }
 
     if (isPrivateRoutes) {
-      return NextResponse.redirect(new URL('/sigh-in', req.url));
+      return NextResponse.redirect(new URL('/sign-in', req.url));
     }
   }
 

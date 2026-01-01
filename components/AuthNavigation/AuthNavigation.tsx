@@ -16,7 +16,7 @@ function AuthNavigation() {
   const handleLogout = async () => {
     await logout();
     clearIsAuthenticated();
-    router.push('/sigh-in');
+    router.push('/sign-in');
   };
 
   return (
@@ -49,7 +49,7 @@ function AuthNavigation() {
           <li>
             <Link
               className={css.navigationLink}
-              href="/sigh-in"
+              href="/sign-in"
               prefetch={false}
             >
               Sign-in
@@ -58,10 +58,10 @@ function AuthNavigation() {
           <li>
             <Link
               className={css.navigationLink}
-              href="/sigh-up"
+              href="/sign-up"
               prefetch={false}
             >
-              Sigh up
+              Sign-up
             </Link>
           </li>
         </>
