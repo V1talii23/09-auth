@@ -1,7 +1,7 @@
 'use client';
 
 import { login } from '@/lib/api/clientApi';
-import css from './SighIn.module.css';
+import css from './SignIn.module.css';
 import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
 import { useAuthStore } from '@/lib/store/auth';

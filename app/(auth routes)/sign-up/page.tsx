@@ -1,6 +1,6 @@
 'use client';
 
-import css from './SighUp.module.css';
+import css from './SignUp.module.css';
 import { register } from '@/lib/api/clientApi';
 import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
