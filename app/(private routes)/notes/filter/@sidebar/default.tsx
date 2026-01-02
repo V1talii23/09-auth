@@ -1,4 +1,3 @@
-// import { getNotes } from '@/lib/api';
 import Link from 'next/link';
 import css from './SidebarNotes.module.css';
 import { Note } from '@/types/note';

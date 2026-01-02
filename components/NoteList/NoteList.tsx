@@ -1,7 +1,5 @@
 'use client';
 
-// import NoteItem from '../NoteItem/NoteItem';
-
 import Link from 'next/link';
 import css from './NoteList.module.css';
 import type { Note } from '@/types/note';
