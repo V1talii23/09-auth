@@ -21,10 +21,9 @@ function AuthProvider({ children }: AuthProvider) {
       if (isAuthenticated) {
         const user = await getMe();
 
-        if (user) {
-          setUser(user);
-        }
-        clearIsAuthenticated();
+        if (user) setUser(user);
+
+        if (!user) clearIsAuthenticated();
       }
     };
 

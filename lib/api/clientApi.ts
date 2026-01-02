@@ -61,8 +61,8 @@ const getMe = async () => {
   return data;
 };
 
-const updateMe = async (userData: User) => {
-  const { data } = await nextServer.patch<User>('users/me', userData);
+const updateMe = async (userName: { username: string }) => {
+  const { data } = await nextServer.patch<User>('/users/me', userName);
   return data;
 };
 
