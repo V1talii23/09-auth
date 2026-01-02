@@ -55,42 +55,20 @@ export async function proxy(req: NextRequest) {
           cookieStore.set('refreshToken', parsed.refreshToken, options);
       }
 
-      // if (isPublicRoutes) {
-      //   return NextResponse.redirect(new URL('/', req.url), {
-      //     headers: { Cookie: cookieStore.toString() },
-      //   });
-      // }
-
-      // if (isPrivateRoutes) {
-      //   return NextResponse.next({
-      //     headers: { Cookie: cookieStore.toString() },
-      //   });
-      // }
       return response;
     }
 
     if (isPrivateRoutes) {
-      return NextResponse.redirect(new URL('/', req.url));
+      return NextResponse.redirect(new URL('/sign-in', req.url));
     }
 
     return NextResponse.next();
+  }
 
-    // if (isPublicRoutes) {
-    //   return NextResponse.next();
-    // }
-
-    // if (isPrivateRoutes) {
-    //   return NextResponse.redirect(new URL('/sign-in', req.url));
-    // }
+  if (isPrivateRoutes) {
+    return NextResponse.redirect(new URL('/sign-in', req.url));
   }
   return NextResponse.next();
-  // if (isPublicRoutes) {
-  //   return NextResponse.redirect(new URL('/', req.url));
-  // }
-
-  // if (isPrivateRoutes) {
-  //   return NextResponse.next();
-  // }
 }
 
 export const config = {
