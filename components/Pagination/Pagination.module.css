@@ -9,7 +9,7 @@
 }
 
 .pagination li {
-  border: 1px solid #414141;
+  border: 1px solid #333;
   border-radius: 4px;
   cursor: pointer;
   min-width: 36px;

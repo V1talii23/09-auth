@@ -9,8 +9,9 @@
 .profileCard {
   max-width: 500px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #0a0a0a;
   border-radius: 12px;
+  border: 1px solid #333;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 24px;
   text-align: left;
@@ -19,7 +20,7 @@
 .formTitle {
   font-size: 32px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #fefefe;
   margin-bottom: 24px;
   text-align: left;
 }
@@ -37,7 +38,7 @@
 
 .profileInfo {
   font-size: 18px;
-  color: #333;
+  color: #888;
   display: flex;
   flex-direction: column;
   gap: 8px;
